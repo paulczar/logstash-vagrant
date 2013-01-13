@@ -5,7 +5,7 @@ ES_VERSION="0.20.2"
 
 echo Install APT Packages
 	apt-get update
-	apt-get -y install default-jre-headless curl redis-server rabbitmq-server g++
+	apt-get -y install openjdk-7-jre-headless curl redis-server rabbitmq-server g++
 
 echo Downloading and installing logstash to /vagrant/logstash/bin/logstash-monolithic.jar
 	 mkdir -p /vagrant/logstash/bin /vagrant/logstash/log /vagrant/logstash/conf.d /vagrant/logstash/conf.examples 
