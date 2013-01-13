@@ -8,17 +8,19 @@ install_logstash.sh will download and install logstash, elasticsearch, and kiban
 
 ## Install ##
 
+_requires vagrant, and a vagrant box:_ __precise64__
+
     git clone git://github.com/paulczar/logstash-vagrant.git
     cd logstash-vagrant
     vagrant up
 
 ## Use ##
-then from your web-browser
 
 Kibana - http://localhost:5601
 Elastic Search - http://localhost:9200
 
 ## Modify ##
+
 _don't forget to restart the logstash service if you're messing with configs_
 
     vagrant ssh
@@ -26,6 +28,7 @@ _don't forget to restart the logstash service if you're messing with configs_
     exit
 
 ## Destroy ##
+
 _cleanup.sh will help clean dirs if you want to submit to github_
 
 	vagrant ssh

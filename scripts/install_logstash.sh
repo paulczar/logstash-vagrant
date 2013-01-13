@@ -8,10 +8,12 @@ echo Install APT Packages
 	apt-get -y install default-jre-headless curl redis-server rabbitmq-server g++
 
 echo Downloading and installing logstash to /vagrant/logstash/bin/logstash-monolithic.jar
+	 mkdir -p /vagrant/logstash/bin /vagrant/logstash/log /vagrant/logstash/conf.d /vagrant/logstash/conf.examples 
 	 wget -q -O /vagrant/logstash/bin/logstash-monolithic.jar https://logstash.objects.dreamhost.com/release/logstash-${LOGSTASH_VERSION}-monolithic.jar 
 	 install -o root -g root -m 0644 /vagrant/scripts/init-logstash.conf /etc/init/logstash.conf
 
 echo Downloading and installing kibana
+	mkdir -p /vagrant/kibana
 	wget -q -O /tmp/kibana-ruby.tar.gz "https://github.com/rashidkpc/Kibana/tarball/kibana-ruby"
  	cd /vagrant/kibana
 	tar xzvf /tmp/kibana-ruby.tar.gz --strip=1 --show-transformed-names
@@ -22,6 +24,7 @@ echo Downloading and installing kibana
 	install -o root -g root -m 0644 /vagrant/scripts/init-kibana.conf /etc/init/kibana.conf
 
 echo downloading and installing elasticsearch
+	mkdir -p /vagrant/elasticsearch
 	wget -q -O /tmp/elasticsearch.tar.gz http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz
 	wget -q -O /tmp/es-wrapper.tar.gz "http://github.com/elasticsearch/elasticsearch-servicewrapper/tarball/master"
 	cd /vagrant/elasticsearch
