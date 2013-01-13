@@ -1,0 +1,13 @@
+# binaries, archives and logs
+*.jar
+*.log
+*.gz
+*.tar
+*.tgz
+
+# app stuff
+elasticsearch/*
+kibana/*
+logstash/bin/*
+logstash/log/*
+logstash/.sincedb*
