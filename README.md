@@ -8,7 +8,7 @@ install_logstash.sh will download and install logstash, elasticsearch, and kiban
 
 ## Install ##
 
-    git clone ???
+    git clone git://github.com/paulczar/logstash-vagrant.git
     cd logstash-vagrant
     vagrant up
 
