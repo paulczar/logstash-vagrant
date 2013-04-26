@@ -1,5 +1,12 @@
 # Logstash Vagrant Environment #
 
+********
+
+ou may want to try this one instead ...  cleaner installs with puppet.
+https://github.com/paulczar/vagrant-logstash
+
+*******
+
 I've been doing a lot of logstash testing recently and find myself constantly building VMs for it.  No longer!     
 
 install_logstash.sh will download and install logstash, elasticsearch, and kibana into /vagrant/   This allows you to access these files from your desktop OS so you can use a friendly text editor.    
