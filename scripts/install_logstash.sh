@@ -8,8 +8,8 @@ echo Install APT Packages
 	apt-get -y install openjdk-7-jre-headless curl redis-server rabbitmq-server g++ git make
 
 echo Downloading and installing logstash to /vagrant/logstash/bin/logstash-monolithic.jar
-	 mkdir -p /vagrant/logstash/bin /vagrant/logstash/log /vagrant/logstash/conf.d /vagrant/logstash/conf.examples 
-	 wget -q -O /vagrant/logstash/bin/logstash-monolithic.jar https://logstash.objects.dreamhost.com/release/logstash-${LOGSTASH_VERSION}-monolithic.jar 
+	 mkdir -p /vagrant/logstash/bin /vagrant/logstash/log /vagrant/logstash/conf.d /vagrant/logstash/conf.examples
+	 wget -q -O /vagrant/logstash/bin/logstash-monolithic.jar https://logstash.objects.dreamhost.com/release/logstash-${LOGSTASH_VERSION}-monolithic.jar
 	 install -o root -g root -m 0644 /vagrant/scripts/init-logstash.conf /etc/init/logstash.conf
 
 echo Downloading and installing kibana
@@ -36,7 +36,7 @@ echo downloading and installing elasticsearch
   	rm -Rf *servicewrapper*
   	cd /vagrant/elasticsearch
   	bin/service/elasticsearch install
-	sed -i "s/<Path to ElasticSearch Home>/\/vagrant\/elasticsearch/" bin/service/elasticsearch.conf
+	sed -i "s/\<Path to Elasticsearch Home\>/\/vagrant\/elasticsearch/" bin/service/elasticsearch.conf
   	sed -i "s/set\.default\.ES_HEAP_SIZE=.*/set.default.ES_HEAP_SIZE=512/" bin/service/elasticsearch.conf
 
 
