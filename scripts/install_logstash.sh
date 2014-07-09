@@ -49,6 +49,6 @@ echo Install ES plugins & rivers
 	/vagrant/elasticsearch/bin/plugin -install mobz/elasticsearch-head
 	/vagrant/elasticsearch/bin/plugin -install lukas-vlcek/bigdesk
 	/vagrant/elasticsearch/bin/plugin -install elasticsearch/elasticsearch-river-rabbitmq/1.4.0
-	/vagrant/elasticsearch/bin/plugin -install leeadkins/elasticsearch-redis-river/0.0.4
+	/vagrant/elasticsearch/bin/plugin -install leeadkins/elasticsearch-redis-river/0.0.5
 
 service elasticsearch restart
